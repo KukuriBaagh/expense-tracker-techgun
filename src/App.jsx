@@ -10,6 +10,9 @@ const App = () => {
   return (
     <>
       <ExpenseItem title={title} price={price} date={date} />
+      <ExpenseItem title={title} price={price} date={date} />
+      <ExpenseItem title={title} price={price} date={date} />
+      <ExpenseItem title={title} price={price} date={date} />
     </>
   )
 }

@@ -8,12 +8,13 @@ const ExpenseItem = (props) => {
     return (
         <>
             <div className="expense-details">
+                <p>{1}</p>
                 <h2 className='expense-title'>{ props.title }</h2>
                 <h4 className='expense-price'>${ props.price }</h4>
                 <h6 className='expense-date'>
-                    <p>{ day }</p>
-                    <p>{ month }</p>
-                    <p>{ year }</p>
+                    <div>{ day }</div>
+                    <div>{ month }</div>
+                    <div>{ year }</div>
                 </h6>
             </div>
         </>
