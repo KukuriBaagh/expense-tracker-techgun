@@ -1,0 +1,28 @@
+.expense-details{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px salmon;
+    border-radius: 10px;
+}
+
+.expense-title{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 2px 3px rgb(253, 96, 5);
+    margin: 10px;
+}
+
+.expense-date{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 2px 3px rgb(253, 96, 5);
+    margin: 10px;
+}
+
+.expense-price{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 2px 3px rgb(253, 96, 5);
+    margin: 10px;
+}
