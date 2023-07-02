@@ -7,7 +7,7 @@ const ExpenseItem = (props) => {
 
     return (
         <>
-            <div className="expense-details">
+            <div className="expense-container">
                 <p>{1}</p>
                 <h6 className='expense-date'>
                     <div>{ day }</div>

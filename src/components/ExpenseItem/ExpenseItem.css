@@ -1,14 +1,3 @@
-.expense-details{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   position: relative;
-   top: 0px;
-   left: 0px;
-   box-sizing: border-box;
-}
-
 .expense-title{
     width: calc(70%);
     text-shadow: 1px 2px 3px rgb(253, 96, 5);
@@ -18,9 +7,7 @@
 }
 
 .expense-date{
-    width: calc(10%);
-    text-shadow: 1px 2px 3px rgb(253, 96, 5);
-    margin: 10px;
+    
 }
 
 .expense-price{
