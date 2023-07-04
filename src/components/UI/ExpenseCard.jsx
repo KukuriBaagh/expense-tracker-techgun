@@ -1,4 +1,5 @@
 import './ExpenseCard.css'
+import React from 'react'
 
 const ExpenseCard = (props) => {
   const classes = 'expense-container ' + props.className

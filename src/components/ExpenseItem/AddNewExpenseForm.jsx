@@ -1,6 +1,7 @@
 import TotalSum from "./TotalExpense"
 import './AddNewExpenseForm.css'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
 
 const AddNewExpenseForm = () => {
 
