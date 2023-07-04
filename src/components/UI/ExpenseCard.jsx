@@ -1,11 +1,9 @@
 import './ExpenseCard.css'
 
-const ExpenseCard = () => {
+const ExpenseCard = (props) => {
+  const classes = 'expense-container ' + props.className
 
-  return (
-    <div className='expense-container'>
-    </div>
-  )
+  return <div className={classes}>{props.children}</div>
 }
 
 export default ExpenseCard

@@ -1,19 +1,29 @@
 import './Expenses.css'
-import data from '../../formObjects'
 import ExpenseItem from '../ExpenseItem/ExpenseItem'
 import ExpenseCard from '../UI/ExpenseCard'
 
-const Expenses = () => {
+
+const Expenses = (props) => {
 
     return (
-        <>
-            <ExpenseCard >
-                <ExpenseItem title={data[0].name} price={data[0].price} date={data[0].date} />
-                <ExpenseItem title={data[1].name} price={data[1].price} date={data[1].date} />
-                <ExpenseItem title={data[2].name} price={data[2].price} date={data[2].date} />
-                <ExpenseItem title={data[3].name} price={data[3].price} date={data[3].date} />
-            </ExpenseCard>
-        </>
+        <ExpenseCard className="expenses">
+            <ExpenseItem
+                date={props.item[0].date}
+                title={props.item[0].title}
+                amount={props.item[0].amount} />
+            <ExpenseItem
+                date={props.item[1].date}
+                title={props.item[1].title}
+                amount={props.item[1].amount} />
+            <ExpenseItem
+                date={props.item[2].date}
+                title={props.item[2].title}
+                amount={props.item[2].amount} />
+            <ExpenseItem
+                date={props.item[3].date}
+                title={props.item[3].title}
+                amount={props.item[3].amount} />
+        </ExpenseCard>
     )
 }
 export default Expenses
