@@ -1,7 +1,6 @@
 import './ExpenseCard.css'
-import ExpenseItem from '../ExpenseItem/ExpenseItem'
 
-const ExpenseCard = (props) => {
+const ExpenseCard = () => {
 
   return (
     <div className='expense-container'>
