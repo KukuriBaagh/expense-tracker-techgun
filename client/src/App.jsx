@@ -1,42 +1,36 @@
 import Expenses from "./components/ExpenseItem/Expenses"
-import React, { useState } from "react"
+import { useEffect, useState } from "react"
 import NewExpense from "./components/ExpenseItem/NewExpenses/NewExpense"
 
-let dummy_expense = [
-  {
-    id: 'e1',
-    title: 'School Fee',
-    amount: 300,
-    date: new Date(2023, 3, 18)
-  },
-  {
-    id: 'e2',
-    title: 'House Rent',
-    amount: 700,
-    date: new Date(2023, 5, 8)
-  },
-  {
-    id: 'e3',
-    title: 'Car Insurence',
-    amount: 200,
-    date: new Date(2023, 4, 28)
-  },
-  {
-    id: 'e4',
-    title: 'Food',
-    amount: 500,
-    date: new Date(2023, 6, 11)
-  },
-]
 
 const App = () => {
+  const [ expenses, setExpenses ] = useState([])
 
-  const [ expenses, setExpenses ] = useState(dummy_expense)
+  // _________        Get Data From Server        _______________ //
+  useEffect(() => {
+    async (e) => {
+      e.preventdefault();
+      let result = await fetch('http://localhost:5001/postexpense' , {
+        method: 'post',
+        body: JSON.stringify({ expenses }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      result = await result.json();
+      console.warn(result);
+      if (result) {
+        alert('New Expense saved successfully');
+        setExpenses();
+        console.log(result);
+      }
+    }
+  })
+// ____________           FETCH API ENDS HERE !           _______________ //
 
   const addExpenseHandler = (expense) => {
-    const updatedExpense = [ expense, ...expenses ]
+    const updatedExpense = [expense, ...expenses]
     setExpenses(updatedExpense)
-    console.log(updatedExpense)
   }
 
   return (
